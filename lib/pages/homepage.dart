@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart ';
+import 'package:my_app/main.dart';
+import 'package:my_app/utils/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +17,18 @@ class HomePage extends StatelessWidget {
         elevation: 4, // optional: adds shadow
       ),
       body: Center(
-        child: Text('Hello, Flutter! $name, welcome to $days days of Flutter'),
+        child: Column(
+          children: [
+            Text('Welcome to $name'),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, MyRoutes.loginroute);
+              },
+              child: Text('login '),
+            ),
+          ],
+        ),
       ),
 
       drawer: Drawer(),
