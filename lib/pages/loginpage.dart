@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changebutton = true;
       });
+      //this is to wait for 1 second
       await Navigator.pushNamed(context, MyRoutes.homeroute);
       setState(() {
         changebutton = false;
