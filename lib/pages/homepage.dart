@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart ';
 import 'package:my_app/main.dart';
 import 'package:my_app/utils/routes.dart';
+import 'package:my_app/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,12 +13,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Catalog App'),
-        backgroundColor: Colors.blue, // ✅ AppBar color added
-        foregroundColor: Colors.white, // optional: makes text/icons white
-        elevation: 4, // optional: adds shadow
+        centerTitle: true, // Centers the title in AppBar
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Centers vertically
+          crossAxisAlignment: CrossAxisAlignment.center, // Centers horizontally
           children: [
             Text('Welcome to $name'),
             SizedBox(height: 20),
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      drawer: Drawer(),
+      drawer: mydrawer(),
     );
   }
 }
